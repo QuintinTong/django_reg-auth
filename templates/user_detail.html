@@ -1,0 +1,11 @@
+
+<h2>{{ object.username }}'s Profile</h2>
+{% if object.userprofile.bio %}
+<div>
+<b>Bio:</b>
+{{ object.userprofile.bio }}
+</div>
+{% endif %}
+{% if object.username == user.username %}
+<p><a href='{% url "home" %}'>Home</a></p>
+{% endif %}
